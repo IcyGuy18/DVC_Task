@@ -1,4 +1,4 @@
-name: DVC Task Pipeline for Github Actions
+name: DVC Task Pipeline
 on: [push]
 jobs:
     run:
