@@ -1,22 +1,9 @@
 stages:
-  get_data:
-    cmd: python datasetGenerator.py
-    deps:
-    - datasetGenerator.py
-    outs:
-    - data_raw.csv
-  process_data:
-    cmd: python process_data.py
-    deps:
-    - data_raw.csv
-    - process_data.py
-    outs:
-    - data_processed.csv
   train:
     cmd: python train.py
     deps:
     - train.py
-    - data_processed.csv
+    - data.csv
     outs:
     - by_region.png
     metrics:
